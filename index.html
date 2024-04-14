@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Your Title Here</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+        /* Container styling */
+        .page-container {
+            margin: 0 auto;
+            max-width: 800px; /* Adjust the maximum width as needed */
+            padding: 20px;
+            border: 1px solid #ccc; /* Border for visualization */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for visual effect */
+            background-color: #fff; /* Background color */
+        }
+
+        /* Centering text content */
+        .page-container h1,
+        .page-container h2,
+        .page-container p,
+        .page-container ul {
+            text-align: center;
+        }
+
+        /* Style for links */
+        .page-container a {
+            color: #007bff; /* Link color */
+        }
+
+        /* Style for toggle button */
+        .page-container button {
+            background-color: #007bff; /* Button background color */
+            color: #fff; /* Button text color */
+            border: none; /* Remove button border */
+            padding: 10px 20px; /* Padding for button */
+            cursor: pointer; /* Cursor style */
+        }
+
+        /* Styling for paragraphs */
+        .page-container p {
+            margin-bottom: 20px; /* Bottom margin for paragraphs */
+        }
+
+        /* Styling for list items */
+        .page-container ul {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0; /* Remove default padding */
+        }
+
+        /* Styling for list items in the navigation */
+        .page-container ul li {
+            display: inline-block; /* Display list items inline */
+            margin-right: 10px; /* Right margin between list items */
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <!-- Navigation links -->
+        <ul>
+            <li><a href="About.html">About Me</a></li>
+            <li><a href="Contact.html">Contact Me</a></li>
+        </ul> 
+    
+        <!-- Home content -->
+        <h1>Home</h1>
+
+        <!-- Toggle paragraph content -->
+        <p id="toggleParagraph">This will provide more info at a later time. Please bear with our progress.</p>
+
+        <!-- Toggle button -->
+        <button onclick="toggleParagraph()">Progression is Loading</button>
+
+        <!-- JavaScript function for toggling paragraph -->
+        <script>
+            function toggleParagraph() {
+                var paragraph = document.getElementById("toggleParagraph");
+                paragraph.style.display = (paragraph.style.display === 'none' || paragraph.style.display === '') ? 'block' : 'none';
+            }
+        </script>
+
+        <!-- Name -->
+        <h2>Kathryn Fuller</h2>
+    </div>
+</body>
+</html>
