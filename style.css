@@ -1,4 +1,10 @@
- * {
+div {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+* {
         margin: 0;
         padding: 0;
         text-decoration: none;
