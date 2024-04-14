@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Contact Me</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+        /* Container styling */
+        .page-container {
+            margin: 0 auto;
+            max-width: 800px; /* Adjust the maximum width as needed */
+            padding: 20px;
+            border: 1px solid #ccc; /* Border for visualization */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for visual effect */
+            background-color: #fff; /* Background color */
+        }
+
+        /* Centering text content */
+        .page-container h1,
+        .page-container h2,
+        .page-container p,
+        .page-container form,
+        .page-container ul {
+            text-align: center;
+        }
+
+        /* Style for links */
+        .page-container a {
+            color: #007bff; /* Link color */
+        }
+
+        /* Styling for paragraphs */
+        .page-container p {
+            margin-bottom: 20px; /* Bottom margin for paragraphs */
+        }
+
+        /* Styling for list items */
+        .page-container ul {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0; /* Remove default padding */
+        }
+
+        /* Styling for list items in the navigation */
+        .page-container ul li {
+            display: inline-block; /* Display list items inline */
+            margin-right: 10px; /* Right margin between list items */
+        }
+
+        /* Styling for form elements */
+        .page-container input[type="text"],
+        .page-container input[type="email"],
+        .page-container input[type="submit"] {
+            margin: 5px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+            box-sizing: border-box; /* Include padding and border in the width */
+        }
+
+        /* Error message style */
+        .page-container .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <!-- Navigation links -->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About Me</a></li>
+        </ul> 
+    
+        <!-- Contact Me header -->
+        <h1>Contact Me</h1>
+
+        <!-- Contact form -->
+        <form name="myForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <span class="error" id="nameError"></span><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <span class="error" id="emailError"></span><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- JavaScript function for form validation -->
+    <script src="script.js"></script>
+</body>
+</html>
