@@ -1,23 +1,17 @@
 const express = require('express');
+const path = require('path');
+
 const app = express();
-const port = 3000;
 
-app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
 
+// Define a route to serve the HTML file
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html'); // send HTML file on GET request
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.post('/submit-form', (req, res) => {
-    const username = req.body.username; // access form data
-    // Add validation logic here
-    res.send(`Username is $kfulle16`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
-
-app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
-});
-
-
-
-
